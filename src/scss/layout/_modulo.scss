@@ -53,7 +53,7 @@
 }
 
 .modulo_desplegar.activo {
-  max-height: 100rem;
+  max-height: 200rem;
   opacity: 1;
   padding-top: 2rem;
 }
@@ -65,7 +65,7 @@ body:not(.loaded) .modulo_desplegar {
 .imagen {
   display: block;
   margin: 20px auto;
-  max-width: 100%;
+  max-width: 50%;
   height: auto;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
