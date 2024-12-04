@@ -9,12 +9,15 @@
     img {
         width: 10rem;
     }
-
+    i {
+        font-size: 2rem;
+    }
     .navegacion {
         display: flex;
         flex-direction: row;
+        align-items: center;
         column-gap: 2rem;
-        margin-right: 2rem;
+        margin-right: 4rem;
     }
     .topbar_derecha a {
         color: v.$textos;

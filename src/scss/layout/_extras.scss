@@ -1,0 +1,67 @@
+@use "base/variables" as v;
+@use "base/mixins" as m;
+
+
+.extras {
+    text-align: center;
+    background-color: #10243d;
+    padding: 7rem 2rem;
+    margin-bottom: 5rem;
+}
+.tituloSeccion {
+    font-size: 3.6rem;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 2rem;
+}
+
+.descripcionSeccion {
+    font-size: 1.6rem;
+    color: #fff;
+    margin-bottom: 3rem;
+}
+
+.filaEstadisticas {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    flex-wrap: wrap; 
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+.columnaEstadistica {
+    flex: 1 1 calc(33.33% - 2rem); 
+    padding: 0;
+}
+
+.estadistica {
+    border-right: 0.2rem solid gray;
+    // box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    min-height: 12rem;
+}
+
+.porcentajeEstadistica {
+    font-size: 3.2rem;
+    font-weight: bold;
+    color: #6abf4b;
+}
+
+.descripcionEstadistica {
+    font-size: 1.8rem;
+    color: #fff;
+    margin-top: 1rem;
+    line-height: 2rem;
+}
+
+.filaEstadisticas {
+    gap: 2rem;
+}
+
+@media (max-width: 768px) {
+    .columnaEstadistica {
+        flex: 1 1 100%;
+        margin-bottom: 2rem;
+    }
+}

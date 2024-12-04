@@ -18,76 +18,219 @@
     <link rel="stylesheet" href="build/css/app.css" />
 
     <!--Iconos-->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <!--Header-->
     <header class="topbar">
       <div class="topbar_izquierda">
-        <img src="build/img/logo.svg" alt="IntelliCampus logo">
+        <a href="index.html">
+          <img src="build/img/logo.svg" alt="IntelliCampus logo" />
+        </a>
       </div>
       <div class="topbar_derecha">
         <nav class="navegacion">
-          <a href="#">Explorar cursos</a>
+          <a href="#cursos">Explorar cursos</a>
           <a href="#">Sobre nosotros</a>
+          <i class="fa-regular fa-user"></i>
+          <a href="#">Hola, Martín Chi</a>
         </nav>
       </div>
     </header>
 
     <!--Main-->
     <main class="contenedor">
-        <div class="banner">
-            <div class="banner_izquierda">
-                <h2>Domina las Habilidades,<br> Crea conexiones.</h2>
-                <p>Explora cursos interactivos sobre temas de vanguardia como Redes Perimetrales, Tunelización Segura y el Internet de las Cosas (IoT)</p>
-                <br>
-                <p>Ya sea que estés iniciando, avanzando o transformando tu carrera, has herramientas que necesitas están a un solo clic.</p>
-                <a href="#" class="boton boton_verde">Continuar aprendiendo</a>
-            </div>
-            <div class="banner_derecha">
-                <picture>
-                    <source srcset="build/img/banner.avif" type="image/avif">
-                    <source srcset="build/img/banner.webp" type="image/webp">
-                    <img loading="lazy" src="build/img/banner.png" alt="Imagen de banner">
-                </picture>
-            </div>
+      <div class="banner">
+        <div class="banner_izquierda">
+          <h2>
+            Domina las Habilidades,<br />
+            Crea conexiones.
+          </h2>
+          <p>
+            Explora cursos interactivos sobre temas de vanguardia como Redes
+            Perimetrales, Tunelización Segura y el Internet de las Cosas (IoT)
+          </p>
+          <br />
+          <p>
+            Ya sea que estés iniciando, avanzando o transformando tu carrera,
+            has herramientas que necesitas están a un solo clic.
+          </p>
+          <a href="#cursos" class="boton boton_verde">Continuar aprendiendo</a>
         </div>
+        <div class="banner_derecha">
+          <picture>
+            <source srcset="build/img/banner.avif" type="image/avif" />
+            <source srcset="build/img/banner.webp" type="image/webp" />
+            <img
+              loading="lazy"
+              src="build/img/banner.png"
+              alt="Imagen de banner"
+            />
+          </picture>
+        </div>
+      </div>
 
-        <div class="estadisticas">
-          <div class="estadistica">
-            <div class="estadistica_titulo">$63.4 mil millones</div>
-            <div class="estadistica_descripcion">Tamaño proyectado del mercado de seguridad en redes para 2026</div>
+      <div class="estadisticas">
+        <div class="estadistica">
+          <div class="estadistica_titulo">$63.4 mil millones</div>
+          <div class="estadistica_descripcion">
+            Tamaño proyectado del mercado de seguridad en redes para 2026
           </div>
-          <div class="estadistica">
-            <div class="estadistica_titulo">37%</div>
-            <div class="estadistica_descripcion">Usuarios de Internet globales que utilizaron VPN en 2023</div>
+        </div>
+        <div class="estadistica">
+          <div class="estadistica_titulo">37%</div>
+          <div class="estadistica_descripcion">
+            Usuarios de Internet globales que utilizaron VPN en 2023
           </div>
-          <div class="estadistica">
-            <div class="estadistica_titulo">80%</div>
-            <div class="estadistica_descripcion">Dispositivos IoT vulnerables a al menos un problema de seguridad</div>
+        </div>
+        <div class="estadistica">
+          <div class="estadistica_titulo">80%</div>
+          <div class="estadistica_descripcion">
+            Dispositivos IoT vulnerables a al menos un problema de seguridad
           </div>
-          <div class="estadistica">
-            <div class="estadistica_titulo">Edge Computing</div>
-            <div class="estadistica_descripcion">Pilar clave para aplicaciones IoT de baja latencia en 2024</div>
+        </div>
+        <div class="estadistica">
+          <div class="estadistica_titulo">Edge Computing</div>
+          <div class="estadistica_descripcion">
+            Pilar clave para aplicaciones IoT de baja latencia en 2024
           </div>
-          <div class="estadistica">
-            <div class="estadistica_titulo">LPWAN</div>
-            <div class="estadistica_descripcion">Solución de conectividad líder para proyectos IoT a gran escala</div>
+        </div>
+        <div class="estadistica">
+          <div class="estadistica_titulo">LPWAN</div>
+          <div class="estadistica_descripcion">
+            Solución de conectividad líder para proyectos IoT a gran escala
           </div>
-        </div><!--.estadisticas-->
+        </div>
+      </div>
+      <!--.estadisticas-->
 
-        <div class="memorial">
-          <i class="fa-solid fa-quote-left"></i>
-          <p>2.5 millones de estudiantes dicen que IntelliCampus los ayudaron a mejorar sus redes.</p>
-          <div class="memorial_separador"></div>
-          <p>Explora alguno de los temas de abajo para darle comienzo a tu historia de éxito.</p>
-        </div><!--.memorial-->
+      <div class="memorial">
+        <i class="fa-solid fa-quote-left"></i>
+        <p>
+          2.5 millones de estudiantes dicen que IntelliCampus los ayudaron a
+          mejorar sus redes.
+        </p>
+        <div class="memorial_separador"></div>
+        <p>
+          Explora alguno de los temas de abajo para darle comienzo a tu historia
+          de éxito.
+        </p>
+      </div>
+      <!--.memorial-->
+
+      <div class="cursos_contenedor" id="cursos">
+        <h2>Nuestros cursos gratuitos más recientes</h2>
+        <div class="cursos">
+          <a href="seguridad.html" class="curso">
+            <div class="curso_imagen">
+              <img src="build/img/curso 1.png" alt="Curso 1 imagen" />
+            </div>
+            <div class="curso_detalles">
+              <ul>
+                <li>Curso</li>
+                <li>Autodidacta</li>
+              </ul>
+              <h3>Introducción a las Redes Perimetrales</h3>
+              <p>
+                Explora los conceptos clave de la primera línea de defensa de
+                seguridad.
+              </p>
+              <div>
+                <p><i class="fa-regular fa-clock"></i> 30 minutos</p>
+                <p><i class="fa-solid fa-money-bill"></i> Gratuito</p>
+              </div>
+            </div>
+          </a>
+
+          <a href="#" class="curso">
+            <div class="curso_imagen">
+              <img src="build/img/curso 2.png" alt="Curso 2 imagen" />
+            </div>
+            <div class="curso_detalles">
+              <ul>
+                <li>Curso</li>
+                <li>Autodidacta</li>
+              </ul>
+              <h3>Tunelización Segura: Conectando el futuro</h3>
+              <p>
+                Domina las técnicas de tunelización para crear conexiones
+                seguras a través de redes públicas, protegiendo tus datos y
+                comunicaciones.
+              </p>
+              <div>
+                <p><i class="fa-regular fa-clock"></i> 30 minutos</p>
+                <p><i class="fa-solid fa-money-bill"></i> Gratuito</p>
+              </div>
+            </div>
+          </a>
+
+          <a href="#" class="curso">
+            <div class="curso_imagen">
+              <img src="build/img/curso 3.png" alt="Curso 3 imagen" />
+            </div>
+            <div class="curso_detalles">
+              <ul>
+                <li>Curso</li>
+                <li>Autodidacta</li>
+              </ul>
+              <h3>Internet de las Cosas</h3>
+              <p>
+                Sumérgete en el fascinante mundo del IoT y aprende cómo los
+                dispositivos conectados están cambiando la forma en que
+                interactuamos con el entorno.
+              </p>
+              <div>
+                <p><i class="fa-regular fa-clock"></i> 30 minutos</p>
+                <p><i class="fa-solid fa-money-bill"></i> Gratuito</p>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+
     </main>
+    <div class="extras">
+      <div class="tituloSeccion">¿Por qué aprender estas habilidades?</div>
+      <div class="descripcionSeccion">
+        Demuestra el valor de tus habilidades adquiridas en áreas clave como
+        Redes Perimetrales, Tunelización y IoT.
+      </div>
+      <div class="filaEstadisticas">
+        <div class="columnaEstadistica">
+          <div class="estadistica">
+            <div class="porcentajeEstadistica">96%</div>
+            <div class="descripcionEstadistica">
+              de los líderes de TI consideran que el personal capacitado en
+              estas áreas aporta un gran valor a las organizaciones.
+            </div>
+          </div>
+        </div>
+        <div class="columnaEstadistica">
+          <div class="estadistica">
+            <div class="porcentajeEstadistica">35%</div>
+            <div class="descripcionEstadistica">
+              obtuvo un aumento salarial significativo después de adquirir
+              habilidades en estas áreas clave.
+            </div>
+          </div>
+        </div>
+        <div class="columnaEstadistica">
+          <div class="estadistica">
+            <div class="porcentajeEstadistica">27%</div>
+            <div class="descripcionEstadistica">
+              recibió una promoción tras dominar áreas como redes y seguridad.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!--Footer-->
     <footer class="footer">
-        <p>© 2024 IntelliCampus. Todos los derechos reservados.</p>
+      <p>© 2024 IntelliCampus. Todos los derechos reservados.</p>
     </footer>
 
     <script src="build/js/app.js"></script>
