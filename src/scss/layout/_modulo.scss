@@ -5,6 +5,7 @@
   margin: 0 auto;
   max-width: 120rem;
   font-family: v.$fuente-principal;
+
   h1 {
     font-size: 4rem;
     letter-spacing: 0.1rem;
@@ -18,8 +19,60 @@
   border: 1px solid gray;
   padding: 2rem;
   border-radius: 0.8rem;
+
+  h2 {
+    font-size: 2rem;
+    cursor: pointer;
+  }
 }
 
 .modulo_desplegar {
+  font-size: 1.6rem;
+  line-height: 2rem;
+  padding-left: 3rem;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.5rem;
+
+  ul {
+    margin-left: 5rem;
+  }
+}
+
+// .oculto {
+//   display: none;
+// }
+
+.modulo_desplegar {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.5s ease, opacity 0.5s ease;
+  padding-top: 0;
+  /* Evita espacios no deseados */
+}
+
+.modulo_desplegar.activo {
+  max-height: 100rem;
+  opacity: 1;
+  padding-top: 2rem;
+}
+
+body:not(.loaded) .modulo_desplegar {
   display: none;
+}
+
+.imagen {
+  display: block;
+  margin: 20px auto;
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.contenedor_modulos {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
 }

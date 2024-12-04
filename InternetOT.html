@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!--Fuente-->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+    rel="stylesheet" />
+
+  <title>Internet de las Cosas (IoT)</title>
+
+  <!--CSS-->
+  <link rel="stylesheet" href="build/css/app.css" />
+
+  <!--Iconos-->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
+</head>
+
+<body>
+  <!--Header-->
+  <header class="topbar">
+    <div class="topbar_izquierda">
+      <a href="index.html">
+        <img src="build/img/logo.svg" alt="IntelliCampus logo" />
+      </a>
+    </div>
+    <div class="topbar_derecha">
+      <nav class="navegacion">
+        <a href="#iot">Explorar cursos</a>
+        <a href="#">Sobre nosotros</a>
+        <i class="fa-regular fa-user"></i>
+        <a href="#">Hola, Martín Chi</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="contenedor contenedor_modulos">
+    <h1>Internet de las Cosas (IoT)</h1>
+    <div class="modulos">
+      <div class="modulo">
+        <h2 onclick="toggleContent('modulo1')">1. Concepto y Arquitectura del IoT</h2>
+        <div class="modulo_desplegar oculto" id="modulo1">
+          <p>
+            El Internet de las Cosas (IoT) se refiere a la red de dispositivos físicos conectados a Internet que recopilan, comparten y procesan datos. Esta tecnología está transformando industrias al permitir la automatización y la toma de decisiones basada en datos.
+          </p>
+          <img src="build/img/iot-concept.jpg" alt="Concepto de IoT" class="imagen">
+          <p class="negritas">Arquitectura básica:</p>
+          <ul>
+            <li>
+              <span class="negritas">Capas de Dispositivos:</span> Sensores, actuadores y hardware físico que interactúan con el entorno.
+            </li>
+            <li>
+              <span class="negritas">Capas de Conectividad:</span> Redes como Wi-Fi, Bluetooth, Zigbee y LPWAN.
+            </li>
+            <li>
+              <span class="negritas">Capas de Procesamiento:</span> Plataformas en la nube para análisis y almacenamiento de datos.
+            </li>
+            <li>
+              <span class="negritas">Capas de Aplicación:</span> Datos procesados utilizados para control remoto, automatización o análisis predictivo.
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!--.modulo-->
+      <div class="modulo">
+        <h2 onclick="toggleContent('modulo2')">2. Aplicaciones del IoT</h2>
+        <div class="modulo_desplegar oculto" id="modulo2">
+          <p>
+            El IoT tiene aplicaciones en diversos sectores, mejorando la eficiencia y la experiencia del usuario.
+          </p>
+          <p class="negritas">2.1 Hogar Inteligente</p>
+          <p>
+            Dispositivos como termostatos, cámaras y asistentes virtuales transforman los hogares, ofreciendo comodidad y eficiencia energética.
+          </p>
+          <img src="build/img/smart-home.jpg" alt="Hogar inteligente" class="imagen">
+          <p class="negritas">2.2 Industria 4.0</p>
+          <p>
+            IoT optimiza procesos industriales, facilita el mantenimiento predictivo y mejora la gestión de inventarios.
+          </p>
+          <p class="negritas">2.3 Salud</p>
+          <p>
+            Dispositivos portátiles monitorean constantes vitales, enviando alertas en tiempo real a los médicos.
+          </p>
+          <img src="build/img/healthcare-iot.jpg" alt="IoT en salud" class="imagen">
+          <p class="negritas">2.4 Ciudades Inteligentes</p>
+          <p>
+            Control del tráfico, gestión de recursos como agua y electricidad, y monitoreo ambiental son posibles gracias al IoT.
+          </p>
+        </div>
+      </div>
+      <!--.modulo-->
+      <div class="modulo">
+        <h2 onclick="toggleContent('modulo3')">3. Retos del IoT</h2>
+        <div class="modulo_desplegar oculto" id="modulo3">
+          <p>
+            Aunque el IoT presenta un enorme potencial, enfrenta desafíos importantes:
+          </p>
+          <ul>
+            <li>
+              <span class="negritas">Seguridad:</span> Aumentan las vulnerabilidades, como ataques DDoS y riesgos de acceso no autorizado.
+            </li>
+            <li>
+              <span class="negritas">Interoperabilidad:</span> La falta de estándares dificulta la integración entre dispositivos.
+            </li>
+            <li>
+              <span class="negritas">Privacidad:</span> La recopilación masiva de datos personales plantea desafíos éticos y regulatorios.
+            </li>
+            <li>
+              <span class="negritas">Escalabilidad:</span> Requiere infraestructuras robustas para manejar grandes volúmenes de datos.
+            </li>
+          </ul>
+          <img src="build/img/iot-security.jpg" alt="Retos de seguridad en IoT" class="imagen">
+        </div>
+      </div>
+      <!--.modulo-->
+      <div class="modulo">
+        <h2 onclick="toggleContent('modulo4')">4. Futuro del IoT</h2>
+        <div class="modulo_desplegar oculto" id="modulo4">
+          <p>
+            El IoT se expande hacia el Internet de Todo (IoE), conectando no solo dispositivos, sino también personas y procesos. Tecnologías emergentes como 5G, Edge Computing e Inteligencia Artificial potencian sus capacidades.
+          </p>
+          <p>
+            Estas innovaciones prometen aplicaciones más rápidas, inteligentes y adaptativas, redefiniendo sectores como la salud, la logística y las ciudades inteligentes.
+          </p>
+          <img src="build/img/iot-future.jpg" alt="Futuro del IoT" class="imagen">
+        </div>
+      </div>
+      <!--.modulo-->
+    </div>
+  </main>
+
+  <!--Footer-->
+  <footer class="footer">
+    <p>© 2024 IntelliCampus. Todos los derechos reservados.</p>
+  </footer>
+
+  <script src="build/js/app.js"></script>
+</body>
+
+</html>

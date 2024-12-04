@@ -1,236 +1,247 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!--Fuente-->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap"
-      rel="stylesheet"
-    />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Proyecto Final Redes</title>
+  <!--Fuente-->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+    rel="stylesheet" />
 
-    <!--CSS-->
-    <link rel="stylesheet" href="build/css/app.css" />
+  <title>Proyecto Final Redes</title>
 
-    <!--Iconos-->
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-    <!--Header-->
-    <header class="topbar">
-      <div class="topbar_izquierda">
-        <a href="index.html">
-          <img src="build/img/logo.svg" alt="IntelliCampus logo" />
-        </a>
+  <!--CSS-->
+  <link rel="stylesheet" href="build/css/app.css" />
+
+  <!--Iconos-->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
+</head>
+
+<body>
+  <!--Header-->
+  <header class="topbar">
+    <div class="topbar_izquierda">
+      <a href="index.html">
+        <img src="build/img/logo.svg" alt="IntelliCampus logo" />
+      </a>
+    </div>
+    <div class="topbar_derecha">
+      <nav class="navegacion">
+        <a href="#cursos">Explorar cursos</a>
+        <a href="#">Sobre nosotros</a>
+        <i class="fa-regular fa-user"></i>
+        <a href="#">Hola, Martín Chi</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="contenedor contenedor_modulos">
+    <h1>Introduccion a las Redes Perimetrales</h1>
+    <div class="modulos">
+      <div class="modulo">
+        <h2 onclick="toggleContent('modulo1')">1. Concepto de Red Perimetral y su Evolución</h2>
+        <div class="modulo_desplegar oculto" id="modulo1">
+          <p>
+            Las redes perimetrales han sido tradicionalmente la primera línea
+            de defensa en la arquitectura de seguridad de una organización. Su
+            propósito es establecer un perímetro claro entre la red interna,
+            considerada segura, y redes externas como Internet, potencialmente
+            peligrosas.
+          </p>
+          <p>
+            El concepto de red perimetral incluye tecnologías diseñadas para
+            aislar, filtrar y monitorear el tráfico entre ambas zonas. Estas
+            redes suelen contener componentes como firewalls, sistemas de
+            detección de intrusos y zonas desmilitarizadas (DMZ).
+          </p>
+          <img src="build/img/red-perimetral.jpg" alt="red perimetral" class="imagen">
+          <p class="negritas">Evolución del concepto:</p>
+          <p>
+            En un entorno de TI tradicional, el perímetro era físico, definido
+            por routers y firewalls que protegían los servidores locales. Sin
+            embargo, con la adopción de tecnologías como la computación en la
+            nube, el trabajo remoto y el acceso móvil, el perímetro
+            tradicional ha desaparecido. Esto ha dado lugar a enfoques como
+            Zero Trust, donde se presume que ninguna red o dispositivo es
+            completamente confiable, y SASE (Secure Access Service Edge), que
+            combina seguridad y conectividad como un servicio.
+          </p>
+        </div>
       </div>
-      <div class="topbar_derecha">
-        <nav class="navegacion">
-          <a href="#cursos">Explorar cursos</a>
-          <a href="#">Sobre nosotros</a>
-          <i class="fa-regular fa-user"></i>
-          <a href="#">Hola, Martín Chi</a>
-        </nav>
+      <!--.modulo-->
+      <div class="modulo">
+        <h2 onclick="toggleContent('modulo2')">2. Componentes Fundamentales de una Red Perimetral</h2>
+        <div class="modulo_desplegar oculto" id="modulo2">
+          <p>
+            Los dispositivos y sistemas que conforman la seguridad perimetral
+            trabajan en conjunto para garantizar una protección robusta.
+          </p>
+          <p class="negritas">2.1 Firewall</p>
+          <p>
+            Es el núcleo de cualquier red perimetral. Los firewalls filtran el
+            tráfico en base a reglas predefinidas y actúan como guardianes que
+            bloquean accesos no autorizados. Existen varios tipos:
+          </p>
+          <img src="build/img/firewall.jpg" alt="Firewall" class="imagen">
+          <ul>
+            <li>
+              <span class="negritas">Firewalls tradicionales:</span> Filtran
+              tráfico basado en direcciones IP, puertos y protocolos.
+            </li>
+            <li>
+              <span class="negritas">Firewalls de aplicaciones:</span>
+              Monitorean y protegen aplicaciones específicas (como servidores
+              web).
+            </li>
+            <li>
+              <span class="negritas">Firewalls tradicionales:</span> Combinan
+              capacidades tradicionales con análisis de contenido, inspección
+              profunda de paquetes y protección contra amenazas avanzadas.
+            </li>
+          </ul>
+          <p class="negritas">
+            2.2 Sistemas de Detección y Prevención de Intrusos (IDS/IPS)
+          </p>
+          <p>
+            Estos sistemas monitorean el tráfico de red en busca de patrones
+            sospechosos. Un IDS solo detecta anomalías y alerta, mientras que
+            un IPS puede bloquear automáticamente el tráfico malicioso.
+          </p>
+          <p class="negritas">2.3 DMZ (Zona Desmilitarizada)</p>
+          <p>
+            Es una subred intermedia diseñada para alojar servicios accesibles
+            desde redes externas, como servidores web o de correo. La DMZ
+            actúa como un amortiguador que protege la red interna, incluso si
+            un atacante compromete la DMZ.
+          </p>
+          <p class="negritas">2.4 VPN (Red Privada Virtual)</p>
+          <p>
+            Crea un canal seguro y cifrado entre un usuario remoto y la red
+            interna, garantizando privacidad y protección contra
+            interceptaciones. Es esencial para organizaciones con empleados
+            remotos o filiales externas.
+          </p>
+          <p class="negritas">2.5 Proxies y Gateways de Seguridad</p>
+          <p>
+            Estos dispositivos gestionan el acceso a Internet de los usuarios
+            internos, filtrando contenido inapropiado, evitando el acceso a
+            sitios peligrosos y protegiendo contra ataques como malware o
+            phishing.
+          </p>
+          <p class="negritas">2.6 Autenticación y Control de Acceso</p>
+          <p>
+            Incluyen servidores como RADIUS o sistemas IAM (Identity and
+            Access Management), que controlan quién puede acceder a recursos
+            específicos dentro de la red.
+          </p>
+        </div>
       </div>
-    </header>
+      <!--.modulo-->
+      <div class="modulo">
+        <h2 onclick="toggleContent('modulo3')">3. Principios y Mejores Prácticas de Seguridad Perimetral</h2>
+        <div class="modulo_desplegar oculto" id="modulo3">
+          <p>
+            El diseño y la operación de redes perimetrales se rigen por
+            principios que buscan maximizar la protección:
+          </p>
+          <img src="build/img/better-practices.jpg" alt="Mejoras practicas de seguridad" class="imagen">
+          <p class="negritas">3.1 Defensa en Profundidad</p>
+          <p>
+            Consiste en implementar múltiples capas de seguridad, de modo que
+            si una falla, las demás puedan mitigar el ataque. Por ejemplo,
+            combinar firewalls, IDS/IPS, segmentación de red y autenticación
+            multifactor.
+          </p>
 
-    <main class="contenedor contenedor_modulos">
-      <h1>Introduccion a las Redes Perimetrales</h1>
-      <div class="modulos">
-        <div class="modulo">
-          <h2>1. Concepto de Red Perimetral y su Evolución</h2>
-          <div class="modulo_desplegar">
-            <p>
-              Las redes perimetrales han sido tradicionalmente la primera línea
-              de defensa en la arquitectura de seguridad de una organización. Su
-              propósito es establecer un perímetro claro entre la red interna,
-              considerada segura, y redes externas como Internet, potencialmente
-              peligrosas.
-            </p>
-            <p>
-              El concepto de red perimetral incluye tecnologías diseñadas para
-              aislar, filtrar y monitorear el tráfico entre ambas zonas. Estas
-              redes suelen contener componentes como firewalls, sistemas de
-              detección de intrusos y zonas desmilitarizadas (DMZ).
-            </p>
-            <p class="negritas">Evolución del concepto:</p>
-            <p>
-              En un entorno de TI tradicional, el perímetro era físico, definido
-              por routers y firewalls que protegían los servidores locales. Sin
-              embargo, con la adopción de tecnologías como la computación en la
-              nube, el trabajo remoto y el acceso móvil, el perímetro
-              tradicional ha desaparecido. Esto ha dado lugar a enfoques como
-              Zero Trust, donde se presume que ninguna red o dispositivo es
-              completamente confiable, y SASE (Secure Access Service Edge), que
-              combina seguridad y conectividad como un servicio.
-            </p>
-          </div>
+          <p class="negritas">3.2 Segmentación de Red</p>
+          <p>
+            Dividir la red en segmentos más pequeños ayuda a minimizar el
+            impacto de un ataque. Por ejemplo, los segmentos con datos
+            sensibles pueden tener políticas de acceso más estrictas que las
+            zonas de uso general.
+          </p>
+          <p class="negritas">3.3 Principio de Privilegio Mínimo</p>
+          <p>
+            Se limita el acceso a recursos y datos únicamente a usuarios,
+            dispositivos o aplicaciones que lo necesiten para cumplir sus
+            funciones. Esto reduce la superficie de ataque.
+          </p>
+          <p class="negritas">3.4 Monitoreo y Auditoría Continua</p>
+          <p>
+            El uso de herramientas como SIEM (Gestión de Información y Eventos
+            de Seguridad) permite supervisar eventos en tiempo real, analizar
+            patrones de tráfico y detectar actividades anómalas que puedan
+            indicar un ataque.
+          </p>
+          <p class="negritas">3.5 Gestión de Parches y Actualizaciones</p>
+          <p>
+            Mantener todos los dispositivos de la red perimetral actualizados
+            ayuda a cerrar brechas de seguridad y prevenir ataques que
+            exploten vulnerabilidades conocidas.
+          </p>
         </div>
-        <!--.modulo-->
-        <div class="modulo">
-          <h2>2. Componentes Fundamentales de una Red Perimetral</h2>
-          <div class="modulo_desplegar">
-            <p>
-              Los dispositivos y sistemas que conforman la seguridad perimetral
-              trabajan en conjunto para garantizar una protección robusta.
-            </p>
-            <p class="negritas">2.1 Firewall</p>
-            <p>
-              Es el núcleo de cualquier red perimetral. Los firewalls filtran el
-              tráfico en base a reglas predefinidas y actúan como guardianes que
-              bloquean accesos no autorizados. Existen varios tipos:
-            </p>
-            <ul>
-              <li>
-                <span class="negritas">Firewalls tradicionales:</span> Filtran
-                tráfico basado en direcciones IP, puertos y protocolos.
-              </li>
-              <li>
-                <span class="negritas">Firewalls de aplicaciones:</span>
-                Monitorean y protegen aplicaciones específicas (como servidores
-                web).
-              </li>
-              <li>
-                <span class="negritas">Firewalls tradicionales:</span> Combinan
-                capacidades tradicionales con análisis de contenido, inspección
-                profunda de paquetes y protección contra amenazas avanzadas.
-              </li>
-            </ul>
-            <p class="negritas">
-              2.2 Sistemas de Detección y Prevención de Intrusos (IDS/IPS)
-            </p>
-            <p>
-              Estos sistemas monitorean el tráfico de red en busca de patrones
-              sospechosos. Un IDS solo detecta anomalías y alerta, mientras que
-              un IPS puede bloquear automáticamente el tráfico malicioso.
-            </p>
-            <p class="negritas">2.3 DMZ (Zona Desmilitarizada)</p>
-            <p>
-              Es una subred intermedia diseñada para alojar servicios accesibles
-              desde redes externas, como servidores web o de correo. La DMZ
-              actúa como un amortiguador que protege la red interna, incluso si
-              un atacante compromete la DMZ.
-            </p>
-            <p class="negritas">2.4 VPN (Red Privada Virtual)</p>
-            <p>
-              Crea un canal seguro y cifrado entre un usuario remoto y la red
-              interna, garantizando privacidad y protección contra
-              interceptaciones. Es esencial para organizaciones con empleados
-              remotos o filiales externas.
-            </p>
-            <p class="negritas">2.5 Proxies y Gateways de Seguridad</p>
-            <p>
-              Estos dispositivos gestionan el acceso a Internet de los usuarios
-              internos, filtrando contenido inapropiado, evitando el acceso a
-              sitios peligrosos y protegiendo contra ataques como malware o
-              phishing.
-            </p>
-            <p class="negritas">2.6 Autenticación y Control de Acceso</p>
-            <p>
-              Incluyen servidores como RADIUS o sistemas IAM (Identity and
-              Access Management), que controlan quién puede acceder a recursos
-              específicos dentro de la red.
-            </p>
-          </div>
-        </div>
-        <!--.modulo-->
-        <div class="modulo">
-          <h2>3. Principios y Mejores Prácticas de Seguridad Perimetral</h2>
-          <div class="modulo_desplegar">
-            <p>
-              El diseño y la operación de redes perimetrales se rigen por
-              principios que buscan maximizar la protección:
-            </p>
-            <p class="negritas">3.1 Defensa en Profundidad</p>
-            <p>
-              Consiste en implementar múltiples capas de seguridad, de modo que
-              si una falla, las demás puedan mitigar el ataque. Por ejemplo,
-              combinar firewalls, IDS/IPS, segmentación de red y autenticación
-              multifactor.
-            </p>
-
-            <p class="negritas">3.2 Segmentación de Red</p>
-            <p>
-              Dividir la red en segmentos más pequeños ayuda a minimizar el
-              impacto de un ataque. Por ejemplo, los segmentos con datos
-              sensibles pueden tener políticas de acceso más estrictas que las
-              zonas de uso general.
-            </p>
-            <p class="negritas">3.3 Principio de Privilegio Mínimo</p>
-            <p>
-              Se limita el acceso a recursos y datos únicamente a usuarios,
-              dispositivos o aplicaciones que lo necesiten para cumplir sus
-              funciones. Esto reduce la superficie de ataque.
-            </p>
-            <p class="negritas">3.4 Monitoreo y Auditoría Continua</p>
-            <p>
-              El uso de herramientas como SIEM (Gestión de Información y Eventos
-              de Seguridad) permite supervisar eventos en tiempo real, analizar
-              patrones de tráfico y detectar actividades anómalas que puedan
-              indicar un ataque.
-            </p>
-            <p class="negritas">3.5 Gestión de Parches y Actualizaciones</p>
-            <p>
-              Mantener todos los dispositivos de la red perimetral actualizados
-              ayuda a cerrar brechas de seguridad y prevenir ataques que
-              exploten vulnerabilidades conocidas.
-            </p>
-          </div>
-        </div>
-        <!--.modulo-->
-        <!--.modulo-->
-        <div class="modulo">
-          <h2>4. Desafíos, Beneficios y el Futuro de las Redes Perimetrales</h2>
-          <div class="modulo_desplegar">
-            <p class="negritas">4.1 Beneficios</p>
-            <ul>
-              <li>
-                <span class="negritas">Protección contra accesos no autorizados</span> Filtran y bloquean el tráfico malicioso.
-              </li>
-              <li>
-                <span class="negritas">Mitigación de amenazas internas y externas:</span> Aislan segmentos comprometidos.
-              </li>
-              <li>
-                <span class="negritas">Cumplimiento normativo:</span> Ayudan a cumplir estándares como ISO 27001 o RGPD.
-              </li>
-              <li>
-                <span class="negritas">Optimización del rendimiento:</span> Controlan el tráfico, reduciendo sobrecargas innecesarias.
-              </li>
-            </ul>
-            <p class="negritas">4.2 Desafíos</p>
-            <ul>
-              <li>
-                <span class="negritas">Perímetro difuso:</span> Con el trabajo remoto y el uso de la nube, proteger el perímetro tradicional ya no es suficiente.
-              </li>
-              <li>
-                <span class="negritas">Complejidad operativa:</span> Integrar y mantener múltiples tecnologías perimetrales puede ser costoso y complicado.
-              </li>
-              <li>
-                <span class="negritas">Amenazas avanzadas:</span> Los ataques como el phishing dirigido y el ransomware requieren enfoques más sofisticados que las soluciones tradicionales.
-              </li>
-            </ul>
-            <p class="negritas">4.3 Futuro de la Seguridad Perimetral</p>
-            <p>La transición hacia modelos como <span class="negritas">Zero Trust</span> redefine cómo se protege una red. En este modelo, no se asume que el tráfico dentro de la red es seguro, por lo que se autentica y verifica continuamente. Además, tecnologías como SASE integran servicios de seguridad en la nube, eliminando la necesidad de dispositivos físicos en el perímetro.</p>
-            <p>En resumen, aunque las redes perimetrales tradicionales siguen siendo fundamentales, las organizaciones deben complementar sus estrategias con enfoques más modernos que aborden las necesidades de un perímetro cada vez más dinámico y distribuido.</p>
-          </div>
-        </div>
-        <!--.modulo-->
       </div>
-      <div class="quiz"></div>
-    </main>
+      <!--.modulo-->
+      <!--.modulo-->
+      <div class="modulo">
+        <h2 onclick="toggleContent('modulo4')">4. Desafíos, Beneficios y el Futuro de las Redes Perimetrales</h2>
+        <div class="modulo_desplegar" id="modulo4">
+          <p class="negritas">4.1 Beneficios</p>
+          <ul>
+            <li>
+              <span class="negritas">Protección contra accesos no autorizados</span> Filtran y bloquean el tráfico
+              malicioso.
+            </li>
+            <li>
+              <span class="negritas">Mitigación de amenazas internas y externas:</span> Aislan segmentos comprometidos.
+            </li>
+            <li>
+              <span class="negritas">Cumplimiento normativo:</span> Ayudan a cumplir estándares como ISO 27001 o RGPD.
+            </li>
+            <li>
+              <span class="negritas">Optimización del rendimiento:</span> Controlan el tráfico, reduciendo sobrecargas
+              innecesarias.
+            </li>
+          </ul>
+          <p class="negritas">4.2 Desafíos</p>
+          <ul>
+            <li>
+              <span class="negritas">Perímetro difuso:</span> Con el trabajo remoto y el uso de la nube, proteger el
+              perímetro tradicional ya no es suficiente.
+            </li>
+            <li>
+              <span class="negritas">Complejidad operativa:</span> Integrar y mantener múltiples tecnologías
+              perimetrales puede ser costoso y complicado.
+            </li>
+            <li>
+              <span class="negritas">Amenazas avanzadas:</span> Los ataques como el phishing dirigido y el ransomware
+              requieren enfoques más sofisticados que las soluciones tradicionales.
+            </li>
+          </ul>
+          <p class="negritas">4.3 Futuro de la Seguridad Perimetral</p>
+          <p>La transición hacia modelos como <span class="negritas">Zero Trust</span> redefine cómo se protege una red.
+            En este modelo, no se asume que el tráfico dentro de la red es seguro, por lo que se autentica y verifica
+            continuamente. Además, tecnologías como SASE integran servicios de seguridad en la nube, eliminando la
+            necesidad de dispositivos físicos en el perímetro.</p>
+          <p>En resumen, aunque las redes perimetrales tradicionales siguen siendo fundamentales, las organizaciones
+            deben complementar sus estrategias con enfoques más modernos que aborden las necesidades de un perímetro
+            cada vez más dinámico y distribuido.</p>
+          <img src="build/img/red-perimetral-futuro.jpg" alt="red perimetral futuro" class="imagen">
+        </div>
+      </div>
+      <!--.modulo-->
+    </div>
+  </main>
 
-    <!--Footer-->
-    <footer class="footer">
-      <p>© 2024 IntelliCampus. Todos los derechos reservados.</p>
-    </footer>
+  <!--Footer-->
+  <footer class="footer">
+    <p>© 2024 IntelliCampus. Todos los derechos reservados.</p>
+  </footer>
 
-    <script src="build/js/app.js"></script>
-  </body>
+  <script src="build/js/app.js"></script>
+</body>
+
 </html>

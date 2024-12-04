@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!--Fuente-->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+    rel="stylesheet" />
+
+  <title>Proyecto Final Redes - Tunelización</title>
+
+  <!--CSS-->
+  <link rel="stylesheet" href="build/css/app.css" />
+
+  <!--Iconos-->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
+</head>
+
+<body>
+  <!--Header-->
+  <header class="topbar">
+    <div class="topbar_izquierda">
+      <a href="index.html">
+        <img src="build/img/logo.svg" alt="IntelliCampus logo" />
+      </a>
+    </div>
+    <div class="topbar_derecha">
+      <nav class="navegacion">
+        <a href="#cursos">Explorar cursos</a>
+        <a href="#">Sobre nosotros</a>
+        <i class="fa-regular fa-user"></i>
+        <a href="#">Hola, Martín Chi</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="contenedor contenedor_modulos">
+    <h1>Introducción a la Tunelización en Redes</h1>
+    <div class="modulos">
+      <div class="modulo">
+        <h2 onclick="toggleContent('modulo1')">1. Concepto y Principios Básicos de la Tunelización</h2>
+        <div class="modulo_desplegar oculto" id="modulo1">
+          <p>
+            La tunelización, también conocida como "tunneling", es una técnica utilizada en redes para encapsular un protocolo de red dentro de otro, permitiendo el transporte seguro de datos a través de una red pública o privada. Esta técnica es crucial para garantizar la seguridad y confidencialidad en entornos donde la comunicación entre dispositivos puede estar expuesta a amenazas externas.
+          </p>
+          <p>
+            El concepto central de la tunelización se basa en la creación de un "túnel" virtual a través del cual los datos se transmiten de manera cifrada, protegiéndolos contra accesos no autorizados o interceptaciones durante su tránsito.
+          </p>
+          <img class="imagen" src="build/img/concepto-tunelizacion.jpg" alt="Diagrama de Tunelización en Redes" />
+          <p class="negritas">Ventajas clave:</p>
+          <ul>
+            <li>
+              <span class="negritas">Seguridad mejorada:</span> Protege los datos mediante cifrado y autenticación.
+            </li>
+            <li>
+              <span class="negritas">Compatibilidad:</span> Permite la interconexión entre redes dispares utilizando protocolos estándar.
+            </li>
+            <li>
+              <span class="negritas">Flexibilidad:</span> Se adapta a diversas necesidades, desde acceso remoto hasta interconexión de oficinas.
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!--.modulo-->
+      <div class="modulo">
+        <h2 onclick="toggleContent('modulo2')">2. Tipos de Tunelización y Protocolos Utilizados</h2>
+        <div class="modulo_desplegar oculto" id="modulo2">
+          <p>
+            Existen diferentes tipos de tunelización, cada uno diseñado para cumplir con requisitos específicos de seguridad, rendimiento y compatibilidad.
+          </p>
+          <img class="imagen" src="build/img/protocolos-tunelizacion.jpg" alt="Tipos de Protocolos de Tunelización" />
+          <p class="negritas">2.1 Tunelización Punto a Punto (PPTP)</p>
+          <p>
+            Este protocolo es uno de los más antiguos y fáciles de configurar. Utiliza una combinación de PPP (Point-to-Point Protocol) para encapsular datos y GRE (Generic Routing Encapsulation) para su transporte. Aunque es rápido, presenta debilidades de seguridad que lo hacen inadecuado para aplicaciones modernas sensibles.
+          </p>
+          <p class="negritas">2.2 Layer 2 Tunneling Protocol (L2TP)</p>
+          <p>
+            Ofrece mayor seguridad que PPTP al combinarse con IPsec. Encapsula los datos en el nivel 2 del modelo OSI, garantizando autenticación robusta y cifrado durante el transporte.
+          </p>
+          <p class="negritas">2.3 IPsec (Internet Protocol Security)</p>
+          <p>
+            Un protocolo ampliamente utilizado que proporciona autenticación, integridad y cifrado a nivel de red. Es ideal para conexiones seguras a gran escala, como redes corporativas o enlaces entre sucursales.
+          </p>
+          <p class="negritas">2.4 OpenVPN</p>
+          <p>
+            Una solución de código abierto que utiliza SSL/TLS para el cifrado, garantizando alta seguridad y flexibilidad. Es compatible con múltiples plataformas y redes.
+          </p>
+          <p class="negritas">2.5 SSH Tunneling</p>
+          <p>
+            Utiliza el protocolo SSH (Secure Shell) para encapsular datos, proporcionando una opción confiable para conexiones remotas seguras.
+          </p>
+        </div>
+      </div>
+      <!--.modulo-->
+      <div class="modulo">
+        <h2 onclick="toggleContent('modulo3')">3. Aplicaciones y Casos de Uso de la Tunelización</h2>
+        <div class="modulo_desplegar oculto" id="modulo3">
+          <p>
+            La tunelización encuentra aplicaciones prácticas en diversos escenarios que demandan seguridad, privacidad y eficiencia en la transferencia de datos.
+          </p>
+          <p class="negritas">3.1 Redes Privadas Virtuales (VPNs)</p>
+          <p>
+            Las VPNs utilizan tunelización para establecer conexiones seguras entre dispositivos o redes. Esto es esencial para trabajadores remotos, ya que garantiza el acceso seguro a los recursos internos de una organización desde ubicaciones externas.
+          </p>
+          <img src="build/img/vpn.jpg" alt="VPN" class="imagen">
+          <p class="negritas">3.2 Conexiones entre Sucursales</p>
+          <p>
+            Las empresas con múltiples oficinas utilizan tunelización para interconectar redes distribuidas, asegurando la transferencia de datos sensibles.
+          </p>
+          <p class="negritas">3.3 Protección contra Restricciones Geográficas</p>
+          <p>
+            Usuarios individuales recurren a la tunelización para eludir restricciones impuestas por gobiernos o proveedores de servicios de Internet.
+          </p>
+          <p class="negritas">3.4 Intercambio de Datos en Ambientes de Nube</p>
+          <p>
+            Los servicios en la nube emplean tunelización para garantizar la seguridad y el rendimiento en la transferencia de datos entre servidores y usuarios.
+          </p>
+          <img src="build/img/datos-nube.jpg" alt="datos en la nube" class="imagen">
+        </div>
+      </div>
+      <!--.modulo-->
+      <div class="modulo">
+        <h2 onclick="toggleContent('modulo4')">4. Retos y Futuro de la Tunelización</h2>
+        <div class="modulo_desplegar oculto" id="modulo4">
+          <p class="negritas">4.1 Retos Actuales</p>
+          <ul>
+            <li>
+              <span class="negritas">Complejidad de Configuración:</span> Implementar tunelización segura puede requerir conocimientos técnicos avanzados.
+            </li>
+            <li>
+              <span class="negritas">Sobrecarga de Rendimiento:</span> El cifrado y la encapsulación pueden reducir el rendimiento de la red.
+            </li>
+            <li>
+              <span class="negritas">Compatibilidad:</span> Algunos dispositivos o redes pueden no soportar ciertos protocolos de tunelización.
+            </li>
+          </ul>
+          <p class="negritas">4.2 Futuro de la Tunelización</p>
+          <img src="build/img/tunneling-future.jpg" alt="Futuro del tunneling" class="imagen">
+          <p>
+            La tunelización continuará evolucionando con el avance de tecnologías como SD-WAN (Software-Defined Wide Area Network) y SASE (Secure Access Service Edge), que integran tunelización con otros servicios de red y seguridad. Estas soluciones ofrecerán una gestión más simplificada, escalabilidad y mayor flexibilidad para entornos empresariales modernos.
+          </p>
+        </div>
+      </div>
+      <!--.modulo-->
+    </div>
+  </main>
+
+  <!--Footer-->
+  <footer class="footer">
+    <p>© 2024 IntelliCampus. Todos los derechos reservados.</p>
+  </footer>
+
+  <script src="build/js/app.js"></script>
+</body>
+
+</html>
