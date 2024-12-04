@@ -1,0 +1,25 @@
+@use "base/variables" as v;
+@use "base/mixins" as m;
+
+.contenedor_modulos {
+  margin: 0 auto;
+  max-width: 120rem;
+  font-family: v.$fuente-principal;
+  h1 {
+    font-size: 4rem;
+    letter-spacing: 0.1rem;
+  }
+}
+
+.modulo {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2rem;
+  border: 1px solid gray;
+  padding: 2rem;
+  border-radius: 0.8rem;
+}
+
+.modulo_desplegar {
+  display: none;
+}

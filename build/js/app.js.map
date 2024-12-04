@@ -1,1 +1,1 @@
-{"version":3,"sources":[],"names":[],"mappings":"","file":"app.js","sourcesContent":[]}
+{"version":3,"sources":["app.js"],"names":["toggleContent","id","document","getElementById","classList","toggle"],"mappings":"AAAA,SAASA,cAAcC,GACHC,SAASC,eAAeF,GAChCG,UAAUC,OAAO","file":"app.js","sourcesContent":["function toggleContent(id) {\r\n    const content = document.getElementById(id);\r\n    content.classList.toggle('oculto');\r\n  }  "]}
