@@ -1,0 +1,27 @@
+@use "base/mixins" as m;
+@use "base/variables" as v;
+
+.memorial {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+    p {
+        font-size: 1.6rem;
+        font-family: v.$fuente-principal;
+    }
+    p:first-of-type {
+        font-family: v.$fuente-principal;
+        font-size: 4rem;
+        max-width: 80rem;
+    }
+    p {
+        text-align: center;
+        line-height: 5rem;
+    }
+    i {
+        font-size: 5rem;
+        color: #8ccc75;
+    }
+}
