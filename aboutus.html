@@ -1,43 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!--Fuente-->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap"
-      rel="stylesheet"
-    />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Proyecto Final Redes</title>
+  <!--Fuente-->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+    rel="stylesheet" />
 
-    <!--CSS-->
-    <link rel="stylesheet" href="build/css/app.css" />
-  </head>
-  <body>
-    <!--Header-->
-    <header class="topbar">
-      <div class="topbar_izquierda">IntelliCampus</div>
-      <div class="topbar_derecha">
-        <nav class="navegacion">
-          <a href="#">Explorar cursos</a>
-          <a href="#">Sobre nosotros</a>
-        </nav>
-      </div>
-    </header>
+  <title>Proyecto Final Redes</title>
 
-    <!--Main-->
-    <main></main>
+  <!--CSS-->
+  <link rel="stylesheet" href="build/css/app.css" />
+</head>
 
-    <!--Footer-->
-    <footer class="footer">
-        <p>© 2024 IntelliCampus. Todos los derechos reservados.</p>
-    </footer>
-    
+<body>
+  <!--Header-->
+  <header class="topbar">
+    <div class="topbar_izquierda">
+      <a href="index.html">
+        <img src="build/img/logo.svg" alt="IntelliCampus logo" />
+      </a>
+    </div>
+    <div class="topbar_derecha">
+      <nav class="navegacion">
+        <a href="index.html#cursos">Explorar cursos</a>
+        <a href="aboutus.html">Créditos</a>
+        <i class="fa-regular fa-user"></i>
+        <a href="#">Hola, Martín Chi</a>
+      </nav>
+    </div>
+  </header> 
 
-    <script src="build/js/app.js"></script>
-  </body>
+  <!--Main-->
+  <main class="aboutus">
+    <h1>Créditos</h1>
+    <div class="autor">
+      <h2><span>Nombre:</span> Víctor Flores Juárez</h2>
+    </div>
+    <div class="autor">
+      <h2><span>Nombre:</span> Ángel Alberto González Lugo</h2>
+    </div>
+  </main>
+
+  <!--Footer-->
+  <footer class="footer">
+    <p>© 2024 IntelliCampus. Todos los derechos reservados.</p>
+  </footer>
+
+
+  <script src="build/js/app.js"></script>
+</body>
+
 </html>
