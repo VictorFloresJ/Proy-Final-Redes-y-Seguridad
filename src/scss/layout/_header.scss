@@ -1,0 +1,23 @@
+@use "base/variables" as v;
+@use "base/mixins" as m;
+
+.topbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    img {
+        width: 10rem;
+    }
+
+    .navegacion {
+        display: flex;
+        flex-direction: row;
+        column-gap: 2rem;
+        margin-right: 2rem;
+    }
+    .topbar_derecha a {
+        color: v.$textos;
+        font-size: 2rem;
+    }
+}

@@ -1,0 +1,20 @@
+@use "variables" as v;
+@use "mixins" as m;
+
+.boton {
+    color: #000;
+    font-family: v.$fuente-principal;
+    font-weight: bold;
+    font-size: 1.8rem;
+    padding: 1rem 3rem;
+    border-radius: 2rem;
+}
+
+.boton_verde {
+    background-color: #6abf4b;
+    transition: background-color 0.2s ease; /* Duración y tipo de transición */
+}
+
+.boton_verde:hover {
+    background-color: #a4dd8f;
+}

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--Fuente-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Proyecto Final Redes</title>
+
+    <!--CSS-->
+    <link rel="stylesheet" href="build/css/app.css" />
+  </head>
+  <body>
+    <!--Header-->
+    <header class="topbar">
+      <div class="topbar_izquierda">
+        <img src="build/img/logo.svg" alt="IntelliCampus logo">
+      </div>
+      <div class="topbar_derecha">
+        <nav class="navegacion">
+          <a href="#">Explorar cursos</a>
+          <a href="#">Sobre nosotros</a>
+        </nav>
+      </div>
+    </header>
+
+    <!--Main-->
+    <main class="contenedor">
+        <div class="banner">
+            <div class="banner_izquierda">
+                <h2>Domina las Habilidades,<br> Crea conexiones.</h2>
+                <p>Explora cursos interactivos sobre temas de vanguardia como Redes Perimetrales, Tunelización Segura y el Internet de las Cosas (IoT)</p>
+                <br>
+                <p>Ya sea que estés iniciando, avanzando o transformando tu carrera, has herramientas que necesitas están a un solo clic.</p>
+                <a href="#" class="boton boton_verde">Continuar aprendiendo</a>
+            </div>
+            <div class="banner_derecha">
+                <picture>
+                    <source srcset="build/img/banner.avif" type="image/avif">
+                    <source srcset="build/img/banner.webp" type="image/webp">
+                    <img loading="lazy" src="build/img/banner.png" alt="Imagen de banner">
+                </picture>
+            </div>
+        </div>
+
+        <div class="estadisticas">
+          <div class="estadistica">
+            <div class="estadistica_titulo">$63.4 mil millones</div>
+            <div class="estadistica_descripcion">Tamaño proyectado del mercado de seguridad en redes para 2026</div>
+          </div>
+          <div class="estadistica">
+            <div class="estadistica_titulo">37%</div>
+            <div class="estadistica_descripcion">Usuarios de Internet globales que utilizaron VPN en 2023</div>
+          </div>
+          <div class="estadistica">
+            <div class="estadistica_titulo">80%</div>
+            <div class="estadistica_descripcion">Dispositivos IoT vulnerables a al menos un problema de seguridad</div>
+          </div>
+          <div class="estadistica">
+            <div class="estadistica_titulo">Edge Computing</div>
+            <div class="estadistica_descripcion">Pilar clave para aplicaciones IoT de baja latencia en 2024</div>
+          </div>
+          <div class="estadistica">
+            <div class="estadistica_titulo">LPWAN</div>
+            <div class="estadistica_descripcion">Solución de conectividad líder para proyectos IoT a gran escala</div>
+          </div>
+        </div><!--.estadisticas-->
+    </main>
+
+    <!--Footer-->
+    <footer class="footer">
+        <p>© 2024 IntelliCampus. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="build/js/app.js"></script>
+  </body>
+</html>

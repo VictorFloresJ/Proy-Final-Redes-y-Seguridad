@@ -1,0 +1,32 @@
+@use "variables" as v;
+@use "mixins" as m;
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+    user-select: none;
+}
+*, *::before, *::after {
+    box-sizing: inherit;
+    padding: 0;
+    margin: 0;
+}
+body {
+    font-family: v.$fuente-principal;
+    // background-color: v.$negro;
+}
+a {
+    text-decoration: none;
+    &:hover {
+        cursor: pointer;
+    }
+}
+.contenedor {
+    width: 95%;
+    margin: 0 auto;
+}
+button {
+    &:hover {
+        cursor: pointer;
+    }
+}
